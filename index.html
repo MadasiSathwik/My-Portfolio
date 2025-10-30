@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sathwik Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">Portfolio</a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section home-section">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="greeting">Hi, I'm</span>
+              <span class="name">Sathwik Madasi</span>
+            </h1>
+            <div class="typing-container">
+              <p>I'm Good at</p>
+              <span class="typed-text"></span>
+              <span class="cursor">&nbsp;</span>
+            </div>
+            <p class="hero-description">
+              Passionate computer scince student creating innovative web
+              experiences with modern technologies and creative problem-solving.
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="https://drive.google.com/file/d/1nnUb_Bz__NI3CxXjCEAddRifpvUuLdO7/view?usp=drive_link"
+                class="btn btn-secondary"
+                >My Resume</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="profile-card">
+              <div class="profile-img">
+                <i class="fas fa-user"></i>
+                <img src="My_photo.jpg" alt="My_Photo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Get to know who I am and what I do</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="glass-card">
+              <h3>My Story</h3>
+              <p>
+                I'm a passionate Computer Science student at SR University with
+                a love for creating digital experiences that make a difference.
+                My journey in tech started with curiosity about how websites
+                work, and has evolved into a deep passion for full-stack
+                development.
+              </p>
+              <p>
+                When I'm not coding, you can find me exploring new technologies,
+                contributing to open-source projects, or sharing knowledge with
+                fellow developers in the community.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="glass-card">
+              <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <h3>Programming Languages</h3>
+              <div class="skill-list">
+                <span class="skill-item">C</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Java</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">TypeScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="glass-card">
+              <div class="skill-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Frontend</h3>
+              <div class="skill-list">
+                <span class="skill-item">HTML5</span>
+                <span class="skill-item">CSS3</span>
+                <span class="skill-item">Tailwind css</span>
+                <span class="skill-item">React</span>
+                <span class="skill-item">BootStrap</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="glass-card">
+              <div class="skill-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Backend</h3>
+              <div class="skill-list">
+                <span class="skill-item">Node.js</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Express</span>
+                <span class="skill-item">MongoDB</span>
+                <span class="skill-item">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="glass-card">
+              <div class="skill-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Tools & Others</h3>
+              <div class="skill-list">
+                <span class="skill-item">Git</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">AWS</span>
+                <span class="skill-item">Figma</span>
+                <span class="skill-item">VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Some of my recent work</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="glass-card">
+              <div class="project-image">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="project-content">
+                <h3>Virtual-Herbal-Garden</h3>
+                <p>
+                  The Virtual Herbal Garden is an interactive web-based platform
+                  designed to educate users about medicinal plants. It features
+                  3D models, detailed plant information, and a text-to-speech
+                  feature, making learning about herbal plants engaging and
+                  accessible.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">Javascript</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://2303a51430.github.io/virtual-herbal-garden/"
+                    class="btn btn-sm btn-primary"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/2303A51430/virtual-herbal-garden"
+                    class="btn btn-sm btn-secondary"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="glass-card">
+              <div class="project-image">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <div class="project-content">
+                <h3>Dream-Destiny</h3>
+                <p>
+                  Dream Destiny is an interactive web application designed to
+                  guide users through personalized career planning and
+                  self-discovery. It combines a sleek, modern UI with
+                  intelligent goal-setting and feedback mechanisms to help
+                  individuals identify, plan, and achieve their professional
+                  dreams.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">BootStrap</span>
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">SQL</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://madasisathwik.github.io/Dream-Destiny/"
+                    class="btn btn-sm btn-primary"
+                    >Live Demo</a
+                  >
+                  <a
+                    href="https://github.com/MadasiSathwik/Dream-Destiny"
+                    class="btn btn-sm btn-secondary"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's work together on your next project
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="glass-card">
+              <h3>Let's Connect</h3>
+              <p>
+                I'm always interested in new opportunities and exciting
+                projects. Feel free to reach out!
+              </p>
+              <div class="contact-items">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>madasisathwik2005@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <span>91+ 7674091561</span>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>warangal, Telangana</span>
+                </div>
+              </div>
+              <div class="social-links">
+                <a href="#" class="social-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <div class="glass-card">
+              <form id="contact-form">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Subject"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; Madasi Sathwik. Made with <i class="fas fa-heart"></i> & all
+          copyrights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
