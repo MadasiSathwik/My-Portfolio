@@ -171,9 +171,9 @@ function createParticle() {
   // Random color
   const colors = [
     "rgba(255, 255, 255, 0.5)",
-    "rgba(102, 126, 234, 0.5)",
-    "rgba(118, 75, 162, 0.5)",
-    "rgba(100, 255, 218, 0.3)",
+    "rgba(0, 229, 255, 0.5)",
+    "rgba(180, 0, 255, 0.5)",
+    "rgba(0, 229, 255, 0.3)",
   ];
   particle.style.background = colors[Math.floor(Math.random() * colors.length)];
 
@@ -223,29 +223,70 @@ contactForm.addEventListener("submit", (e) => {
   }, 2000);
 });
 
-// Add hover effects to project cards
-document.querySelectorAll(".project-card").forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-10px) scale(1.02)";
-    card.style.transition = "all 0.3s ease";
+// 3D Tilt Effect on Elements
+document.querySelectorAll(".project-card, .skill-category, .glass-card, .profile-img").forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    // Calculate rotation bounds (adjust 15 for more/less sensitivity)
+    const rotateX = ((y - centerY) / centerY) * -15; 
+    const rotateY = ((x - centerX) / centerX) * 15;
+    
+    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
+    card.style.transition = "none";
+    card.style.zIndex = "10";
   });
 
   card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0) scale(1)";
+    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+    card.style.transition = "transform 0.5s ease";
+    card.style.zIndex = "1";
   });
 });
 
-// Add hover effects to skill cards
-document.querySelectorAll(".skill-category").forEach((skill) => {
-  skill.addEventListener("mouseenter", () => {
-    skill.style.transform = "translateY(-5px) scale(1.02)";
-    skill.style.transition = "all 0.3s ease";
+// Custom Cursor Implementation (for desktop)
+if (window.innerWidth > 1024) {
+  const cursor = document.createElement("div");
+  cursor.classList.add("custom-cursor");
+  document.body.appendChild(cursor);
+
+  const cursorTrail = document.createElement("div");
+  cursorTrail.classList.add("cursor-trail");
+  document.body.appendChild(cursorTrail);
+
+  let curX = 0, curY = 0;
+  let tgtX = 0, tgtY = 0;
+
+  document.addEventListener("mousemove", (e) => {
+    tgtX = e.clientX;
+    tgtY = e.clientY;
+    cursor.style.transform = `translate3d(calc(${tgtX}px - 50%), calc(${tgtY}px - 50%), 0)`;
   });
 
-  skill.addEventListener("mouseleave", () => {
-    skill.style.transform = "translateY(0) scale(1)";
+  function animateCursor() {
+    curX += (tgtX - curX) * 0.15;
+    curY += (tgtY - curY) * 0.15;
+    cursorTrail.style.transform = `translate3d(calc(${curX}px - 50%), calc(${curY}px - 50%), 0)`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  document.querySelectorAll("a, button, .glass-card, .nav-link, input, textarea").forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursorTrail.classList.add("hover");
+      cursor.style.transform = `translate3d(calc(${tgtX}px - 50%), calc(${tgtY}px - 50%), 0) scale(1.5)`;
+    });
+    el.addEventListener("mouseleave", () => {
+      cursorTrail.classList.remove("hover");
+      cursor.style.transform = `translate3d(calc(${tgtX}px - 50%), calc(${tgtY}px - 50%), 0) scale(1)`;
+    });
   });
-});
+}
 
 // Animate numbers in about section
 function animateValue(element, start, end, duration) {
@@ -311,13 +352,32 @@ window.addEventListener("scroll", highlightActiveNav);
 const style = document.createElement("style");
 style.textContent = `
     .nav-link.active {
-        color: #667eea;
+        color: #00E5FF;
     }
     .nav-link.active::after {
         width: 100%;
     }
 `;
 document.head.appendChild(style);
+
+// Bouncy Scroll Reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+// We wait a tiny bit after DOM load to attach classes so initial view isn't jumping
+setTimeout(() => {
+  document.querySelectorAll('.glass-card, .skill-category, .project-card, .contact-item').forEach((el, index) => {
+    el.classList.add('hidden-element');
+    // Add staggered delay based on index for siblings
+    el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+    observer.observe(el);
+  });
+}, 100);
 
 // Initialize everything when page loads
 window.addEventListener("load", () => {
