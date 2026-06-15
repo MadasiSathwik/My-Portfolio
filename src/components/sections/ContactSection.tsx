@@ -50,7 +50,7 @@ export default function ContactSection() {
               </p>
 
               <div className="mt-auto space-y-4">
-                <SocialButton icon={<Mail size={20} />} label="Email" href="[madasisathwik2005@gmail.com]" color="hover:border-soft-blue" />
+                <SocialButton icon={<Mail size={20} />} label="Email" href="mailto:madasisathwik2005@gmail.com" color="hover:border-soft-blue" />
                 <SocialButton icon={<Link2 size={20} />} label="LinkedIn" href="https://www.linkedin.com/in/sathwik-madasi-1245692b9/" color="hover:border-soft-cyan" />
                 <SocialButton icon={<Code2 size={20} />} label="GitHub" href="https://github.com/MadasiSathwik" color="hover:border-light-purple" />
                 <SocialButton icon={<Code size={20} />} label="LeetCode" href="https://leetcode.com/u/madasisathwik/" color="hover:border-soft-blue" />
