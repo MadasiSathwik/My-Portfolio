@@ -41,11 +41,11 @@ export default function AboutSection() {
 
           <div className="grid md:grid-cols-3 gap-10 items-center mb-16">
             {/* Left side: Circular image with glow and hover animation */}
-            <motion.div 
-              variants={itemVariants} 
+            <motion.div
+              variants={itemVariants}
               className="flex flex-col items-center justify-center md:col-span-1"
             >
-              <motion.div 
+              <motion.div
                 whileHover={{ scale: 1.05, rotate: 2 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="relative w-48 h-48 md:w-56 md:h-56 rounded-full glass-card p-2 group shadow-2xl shadow-light-purple/20 hover:shadow-light-purple/40 transition-all duration-500"
@@ -61,7 +61,7 @@ export default function AboutSection() {
               </motion.div>
               <div className="text-center mt-6">
                 <h3 className="text-xl font-bold text-white mb-1">Sathwik Madasi</h3>
-                <p className="text-xs text-soft-blue uppercase tracking-wider font-semibold">Software Developer & CSE Student</p>
+                <p className="text-xs text-soft-blue uppercase tracking-wider font-semibold">CSE Student</p>
               </div>
             </motion.div>
 

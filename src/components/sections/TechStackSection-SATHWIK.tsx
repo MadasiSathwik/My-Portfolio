@@ -2,7 +2,9 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { FaJava, FaPython, FaCode, FaCubes, FaGitAlt, FaGithub, FaAws } from "react-icons/fa";
+import { FaJava, FaPython, FaCode, FaCubes, FaGithub } from "react-icons/fa";
+import { FaAws } from "react-icons/fa6";
+import { TbBrandVscode } from "react-icons/tb";
 import { 
   SiJavascript, 
   SiTypescript, 
@@ -26,10 +28,10 @@ import {
   SiPandas, 
   SiScikitlearn, 
   SiGoogle,
+  SiGit,
   SiPytorch
 } from "react-icons/si";
 import { DiDatabase } from "react-icons/di";
-import { VscVscode } from "react-icons/vsc";
 import { BrainCircuit } from "lucide-react";
 
 interface Skill {
@@ -85,9 +87,9 @@ const techCategories: TechCategory[] = [
     title: "Cloud & Tools",
     skills: [
       { name: "AWS", icon: FaAws, color: "text-[#FF9900]" },
-      { name: "Git", icon: FaGitAlt, color: "text-[#F05032]" },
+      { name: "Git", icon: SiGit, color: "text-[#F05032]" },
       { name: "GitHub", icon: FaGithub, color: "text-white" },
-      { name: "VS Code", icon: VscVscode, color: "text-[#007ACC]" },
+      { name: "VS Code", icon: TbBrandVscode, color: "text-[#007ACC]" },
       { name: "Jupyter Notebook", icon: SiJupyter, color: "text-[#F37626]" },
       { name: "IntelliJ IDEA", icon: SiIntellijidea, color: "text-[#FE315D]" },
       { name: "Figma", icon: SiFigma, color: "text-[#F24E1E]" },

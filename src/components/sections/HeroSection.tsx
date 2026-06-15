@@ -81,7 +81,7 @@ export default function HeroSection() {
               </span>
             </Link>
             <Link
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1OIDSmyOvQVyGlrp4yMnvFT2gQHW9puMh/view?usp=sharing"
               target="_blank"
               className="glass-button px-6 py-3 text-white font-medium rounded-full flex items-center gap-2"
             >

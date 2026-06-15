@@ -15,9 +15,9 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-4">
-            <SocialLink href="#" icon={<Code2 size={20} />} label="GitHub" />
-            <SocialLink href="#" icon={<Link2 size={20} />} label="LinkedIn" />
-            <SocialLink href="#" icon={<Mail size={20} />} label="Email" />
+            <SocialLink href="https://github.com/MadasiSathwik" icon={<Code2 size={20} />} label="GitHub" />
+            <SocialLink href="https://www.linkedin.com/in/sathwik-madasi-1245692b9/" icon={<Link2 size={20} />} label="LinkedIn" />
+            <SocialLink href="madasisathwik2005@gmail.com" icon={<Mail size={20} />} label="Email" />
           </div>
         </div>
 

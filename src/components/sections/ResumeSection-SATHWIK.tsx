@@ -30,33 +30,38 @@ export default function ResumeSection() {
         >
           <div className="flex flex-col md:flex-row gap-10 items-center">
             {/* Left side: PDF Preview */}
-            <motion.div
-              whileHover={{ scale: 1.02, rotateY: 3 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="w-full md:w-1/2 relative group"
+            <Link
+              href="https://drive.google.com/file/d/1OIDSmyOvQVyGlrp4yMnvFT2gQHW9puMh/view?usp=sharing"
+              target="_blank"
+              className="w-full md:w-1/2 block relative group cursor-pointer"
             >
-              <div className="absolute inset-0 bg-light-purple/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative aspect-[1/1.4] bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-2 group shadow-xl">
-                {/* PDF Image Thumbnail Preview */}
-                <div className="w-full h-full rounded-xl overflow-hidden shadow-inner flex flex-col relative bg-white">
-                  <img 
-                    src="/resume.png" 
-                    alt="Sathwik Madasi Resume Preview"
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                  {/* Subtle vignette/gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-dark-1/5 to-bg-dark-1/20" />
-                </div>
+              <motion.div
+                whileHover={{ scale: 1.02, rotateY: 3 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <div className="absolute inset-0 bg-light-purple/20 blur-2xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative aspect-[1/1.4] bg-white/5 border border-white/10 rounded-2xl overflow-hidden flex flex-col items-center justify-center p-2 group shadow-xl">
+                  {/* PDF Image Thumbnail Preview */}
+                  <div className="w-full h-full rounded-xl overflow-hidden shadow-inner flex flex-col relative bg-white">
+                    <img 
+                      src="/resume.png" 
+                      alt="Sathwik Madasi Resume Preview"
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {/* Subtle vignette/gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-bg-dark-1/5 to-bg-dark-1/20" />
+                  </div>
 
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-bg-dark-1/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="flex flex-col items-center gap-2">
-                    <FileText size={48} className="text-white drop-shadow-lg animate-pulse" />
-                    <span className="text-sm font-semibold text-white tracking-wider">Preview Resume</span>
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-bg-dark-1/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-2">
+                      <FileText size={48} className="text-white drop-shadow-lg animate-pulse" />
+                      <span className="text-sm font-semibold text-white tracking-wider">Preview Resume</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </Link>
 
             {/* Right side: Actions & Details */}
             <div className="w-full md:w-1/2 flex flex-col">

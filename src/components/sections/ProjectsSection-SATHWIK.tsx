@@ -7,28 +7,28 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "Retinal Disease Classification",
-    description: "A diagnostic deep learning pipeline using PyTorch and pretrained CNN models (ResNet/EfficientNet) to classify fundus images into 8 distinct retinal conditions. Achieved a +10% improvement in validation accuracy using targeted data augmentation, weighted training, and confusion matrix-driven error analysis.",
-    image: "/retina_classification.png",
-    tech: ["Python", "PyTorch", "OpenCV", "Timm", "Scikit-Learn"],
-    liveUrl: "https://madasisathwik.github.io/Retina-Classification-frontend/",
-    githubUrl: "https://github.com/MadasiSathwik/Retina-Classification-frontend",
-  },
-  {
     title: "Symptom Cure",
     description: "An AI-powered herbal remedy recommendation platform that analyzes symptoms and provides personalized natural remedy suggestions with intelligent safety analysis.",
     image: "/Symptom_cure.png",
     tech: ["React.js", "Flask", "Node.js", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://madasisathwik.github.io/SymptomCure/",
+    githubUrl: "https://github.com/MadasiSathwik/SymptomCure",
   },
   {
     title: "Food Rescue",
     description: "A full-stack food donation and management platform connecting restaurants with NGOs to reduce food waste and improve food distribution efficiency.",
     image: "/foodrescue.png",
     tech: ["React.js", "Flask", "PostgreSQL", "SQLAlchemy"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://food-rescue-4-bxux.onrender.com/",
+    githubUrl: "https://github.com/MadasiSathwik/Food_Rescue",
+  },
+  {
+    title: "Retinal Disease Classification",
+    description: "A diagnostic deep learning pipeline using PyTorch and pretrained CNN models (ResNet/EfficientNet) to classify fundus images into 8 distinct retinal conditions. Achieved a +10% improvement in validation accuracy using targeted data augmentation, weighted training, and confusion matrix-driven error analysis.",
+    image: "/retina_classification.png",
+    tech: ["Python", "PyTorch", "OpenCV", "Timm", "Scikit-Learn"],
+    liveUrl: "https://madasisathwik.github.io/Retina-Classification-frontend/",
+    githubUrl: "https://github.com/MadasiSathwik/Retina-Classification-frontend",
   },
 ];
 
@@ -65,7 +65,7 @@ function ProjectCard({ project, index, isInView }: { project: any; index: number
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
-      whileHover={{
+      whileHover={{ 
         y: -10,
         boxShadow: "0 20px 40px -15px rgba(96, 165, 250, 0.25)",
         borderColor: "rgba(255, 255, 255, 0.2)"
@@ -81,13 +81,13 @@ function ProjectCard({ project, index, isInView }: { project: any; index: number
           loading="lazy"
         />
       </div>
-
+      
       <div className="p-6 md:p-8 flex flex-col flex-1">
         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-soft-blue transition-colors">{project.title}</h3>
         <p className="text-slate-gray text-sm md:text-base leading-relaxed mb-6 flex-1">
           {project.description}
         </p>
-
+        
         <div className="flex flex-wrap gap-2 mb-8">
           {project.tech.map((t: string) => (
             <span key={t} className="px-3 py-1 text-xs font-semibold bg-white/5 border border-white/10 rounded-full text-soft-blue">
@@ -95,15 +95,17 @@ function ProjectCard({ project, index, isInView }: { project: any; index: number
             </span>
           ))}
         </div>
-
+        
         <div className="flex gap-4 mt-auto">
-          <Link
-            href={project.liveUrl}
-            target="_blank"
-            className="flex-1 glass-button py-2.5 rounded-xl flex items-center justify-center gap-2 text-white text-sm font-medium hover:bg-white/10 transition-colors"
-          >
-            <ExternalLink size={16} /> Live Demo
-          </Link>
+          {project.liveUrl && (
+            <Link
+              href={project.liveUrl}
+              target="_blank"
+              className="flex-1 glass-button py-2.5 rounded-xl flex items-center justify-center gap-2 text-white text-sm font-medium hover:bg-white/10 transition-colors"
+            >
+              <ExternalLink size={16} /> Live Demo
+            </Link>
+          )}
           <Link
             href={project.githubUrl}
             target="_blank"

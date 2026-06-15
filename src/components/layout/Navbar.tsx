@@ -53,7 +53,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/1OIDSmyOvQVyGlrp4yMnvFT2gQHW9puMh/view?usp=sharing"
             target="_blank"
             className="px-5 py-2 rounded-full text-sm font-medium bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all duration-300 ml-4"
           >
@@ -91,7 +91,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1OIDSmyOvQVyGlrp4yMnvFT2gQHW9puMh/view?usp=sharing"
                 target="_blank"
                 className="w-full text-center px-5 py-3 rounded-xl font-medium bg-white/10 text-white"
               >
